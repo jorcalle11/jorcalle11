@@ -3,11 +3,11 @@ import connect    from 'gulp-connect';
 import stylus     from 'gulp-stylus';
 
 const path = {
-  root: './app',
-  html: './app/index.html',
+  root: './',
+  html: './index.html',
   styles: {
-    input: './app/css/stylus/*.styl',
-    output: './app/css'
+    input: './public/css/stylus/*.styl',
+    output: './public/css'
   }
 }
 
