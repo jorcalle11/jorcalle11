@@ -1,20 +1,23 @@
 {
-  "name": "about-me",
-  "version": "1.0.0",
-  "description": "Información profesional",
+  "name": "jorcalle11",
+  "version": "2.0.0",
+  "description": "My personal Website",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jorcalle11/about-me.git"
+    "url": "git+https://github.com/jorcalle11/jorcalle11.git"
   },
-  "author": "Jorge Calle => @Jomaca11",
-  "license": "ISC",
+  "author": "Jorge Calle @jorcalle11",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jorcalle11/about-me/issues"
+    "url": "https://github.com/jorcalle11/jorcalle11/issues"
   },
+  "keywords": [
+    "jorcalle11"
+  ],
   "homepage": "https://github.com/jorcalle11/about-me#readme",
   "devDependencies": {
     "babel-core": "^6.7.7",
