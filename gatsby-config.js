@@ -5,5 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Jorge Calle`,
+    siteUrl: `https://www.jorgecalle.co`,
+    description: `My personal website`,
+    author: `@jorcalle11`,
+  },
+  plugins: [`gatsby-plugin-styled-components`],
 }
