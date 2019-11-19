@@ -8,9 +8,12 @@ import Footer from "./Footer"
 import Header from "../components/Header"
 
 const Root = styled.div`
+  background-color: var(--primaryColor);
+  color: var(--primaryText);
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -5,9 +5,11 @@ import Emoji from "./Emoji"
 import Container from "./Container"
 
 const CustomFooter = styled.footer`
-  background-color: #f5f5f5;
+  background-color: var(--secondaryColor);
+  color: var(--secondaryText);
   padding: 1rem 0;
   margin-top: auto !important;
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 `
 
 const Div = styled.div`
@@ -19,7 +21,6 @@ const Div = styled.div`
 const P = styled.p`
   border: 1px solid transparent;
   font-size: 0.9rem;
-  color: #6c757d;
   margin: 0;
 `
 

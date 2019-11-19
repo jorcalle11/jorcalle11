@@ -9,3 +9,30 @@ body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
 }
+
+body {
+  --primaryColor: white;
+  --primaryText: #212121;
+  --secondaryColor: #f5f5f5;
+  --secondaryText: #757575;
+  --textLink: #212121;
+  --accentColor: #f44336;
+
+  background-color: var(--primaryColor);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --primaryColor: #212121;
+  --primaryText: #f5f5f5;
+  --secondaryColor: #212121;
+  --secondaryText: #6c757d;
+  --textLink: #f3f3f3;
+  --accentColor: #f44336;
+}
+
+a {
+  color: var(--textLink);
+  text-decoration: none;
+}

@@ -1,24 +1,22 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
 import Container from "./Container"
+import CustomLink from "./Link"
+import DarkModeToggle from "./DarkModeToggle"
 
 const Brand = ({ children }) => <h2 style={{ margin: 0 }}>{children}</h2>
 
 const CustomHeader = styled.header`
   padding: 1.3rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 `
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const CustomLink = styled(Link)`
-  text-decoration: none;
 `
 
 const Li = styled.li`
@@ -52,6 +50,9 @@ const Header = ({ siteTitle }) => (
           </Li>
           <Li>
             <CustomLink to="/contact">contact</CustomLink>
+          </Li>
+          <Li>
+            <DarkModeToggle />
           </Li>
         </Ul>
       </Nav>
