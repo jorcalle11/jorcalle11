@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -20,8 +21,8 @@ module.exports = {
         name: `Jorge Calle - Javascript Developer`,
         short_name: `Jorge Calle`,
         start_url: `/`,
-        background_color: `#f5f5f5`,
-        theme_color: `#f5f5f5`,
+        background_color: `#F44336`,
+        theme_color: `#F44336`,
         display: `minimal-ui`,
         icon: `src/images/jomaca.png`, // This path is relative to the root of the site.
       },
