@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
 const Div = styled.div`
   height: 100%;
@@ -11,15 +12,24 @@ const Div = styled.div`
   justify-content: center;
 `
 
+const H1 = styled.h1`
+  font-size: 2.5rem;
+`
+
+const P = styled.p`
+  font-size: 1.2rem;
+`
+
 export default () => (
   <Layout>
+    <SEO title="Home" />
     <Div>
-      <h1>Hi there!</h1>
-      <p>
+      <H1>Hi there!</H1>
+      <P>
         I'm <b>Jorge Calle</b> and I am a <b>Javascript Developer</b> from
         Sahagún (CO) with more than 4 years of experience writing code in both
         Front-end and Back-end side.
-      </p>
+      </P>
       <Link to="/contact">Contact me</Link>
     </Div>
   </Layout>
