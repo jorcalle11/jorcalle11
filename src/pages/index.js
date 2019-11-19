@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
+import CustomLink from "../components/Link"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
@@ -30,7 +30,9 @@ export default () => (
         Sahagún (CO) with more than 4 years of experience writing code in both
         Front-end and Back-end side.
       </P>
-      <Link to="/contact">Contact me</Link>
+      <CustomLink to="/contact" withDecoration={true}>
+        Contact me
+      </CustomLink>
     </Div>
   </Layout>
 )
