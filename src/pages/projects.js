@@ -2,11 +2,12 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
+import UnderConstruction from "../components/Construction"
 
 const About = () => (
   <Layout>
     <SEO title="Projects" />
-    <div>This is the Project page</div>
+    <UnderConstruction pageName="Projects" />
   </Layout>
 )
 
