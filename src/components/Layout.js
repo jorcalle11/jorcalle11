@@ -15,6 +15,11 @@ const Root = styled.div`
   height: 100%;
   transition: color 0.2s ease-out, background 0.2s ease-out;
 `
+
+const Main = styled.main`
+  height: 100%;
+`
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -29,7 +34,9 @@ const Layout = ({ children }) => {
   return (
     <Root>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>{children}</Container>
+      <Main>
+        <Container>{children}</Container>
+      </Main>
       <Footer />
     </Root>
   )
