@@ -25,8 +25,8 @@ const CustomLink = styled(Link)`
     `}
 `
 
-export default ({ to = "", children, withDecoration = false }) => (
-  <CustomLink to={to} withDecoration={withDecoration}>
+export default ({ to = "", style, children, withDecoration = false }) => (
+  <CustomLink style={style} to={to} withDecoration={withDecoration}>
     {children}
   </CustomLink>
 )
