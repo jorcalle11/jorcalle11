@@ -43,6 +43,7 @@ const CustomLink = styled(Link)`
 
   &&:hover {
     background-color: #d32f2f;
+    text-decoration: none;
   }
 `
 
