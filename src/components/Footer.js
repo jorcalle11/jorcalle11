@@ -24,18 +24,14 @@ const P = styled.p`
   margin: 0;
 `
 
-const A = styled.a`
-  color: var(--accentColor);
-`
-
 const Footer = () => (
   <CustomFooter>
     <Container>
       <Div>
         <P>
           © {new Date().getFullYear()}, Powered by{" "}
-          <A href="https://www.gatsbyjs.org">Gatsby</A> and{" "}
-          <A href="https://zeit.co/">Zeit</A>
+          <a href="https://www.gatsbyjs.org">Gatsby</a> and{" "}
+          <a href="https://zeit.co/">Zeit</a>
         </P>
         <P>
           From Sahagún with <Emoji label="heart" children="❤️" /> to the{" "}
