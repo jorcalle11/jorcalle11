@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const CustomLink = styled(Link)`
+const CustomLink = styled(props => <Link {...props} />)`
   color: var(--textLink);
   text-decoration: none;
 
@@ -10,23 +10,28 @@ const CustomLink = styled(Link)`
     text-decoration: underline;
   }
 
-  &&:active {
-    color: var(--accentColor);
+  &&:active,
+  &&:focus {
+    outline: 0;
+    border: none;
   }
-
-  ${props =>
-    props.withDecoration &&
-    `
-      text-decoration: underline;
-
-      &&:hover {
-        text-decoration: none;
-      }
-    `}
 `
 
-export default ({ to = "", style, children, withDecoration = false }) => (
-  <CustomLink style={style} to={to} withDecoration={withDecoration}>
+export default ({
+  to = "",
+  style,
+  children,
+  title = "",
+  partiallyActive = false,
+  activeStyle = {},
+}) => (
+  <CustomLink
+    style={style}
+    to={to}
+    title={title}
+    partiallyActive={partiallyActive}
+    activeStyle={activeStyle}
+  >
     {children}
   </CustomLink>
 )

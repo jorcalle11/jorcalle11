@@ -3,13 +3,18 @@ import React from "react"
 import styled from "styled-components"
 
 import Container from "./Container"
-import CustomLink from "./Link"
+import NavLink from "./Link"
 import DarkModeToggle from "./DarkModeToggle"
 
-const Brand = ({ children }) => <h2 style={{ margin: 0 }}>{children}</h2>
+const Brand = styled.h2`
+  margin: 0;
+
+  a:hover {
+    text-decoration: none !important;
+  }
+`
 
 const CustomHeader = styled.header`
-  padding: 1.3rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 `
 
@@ -17,6 +22,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 75px;
 `
 
 const Li = styled.li`
@@ -31,25 +37,49 @@ const Ul = styled.ul`
   display: flex;
 `
 
+const activeStyle = {
+  color: "var(--accentColor)",
+}
+
 const Header = ({ siteTitle }) => (
   <CustomHeader>
     <Container>
       <Nav>
         <Brand>
-          <CustomLink to="/">{siteTitle}</CustomLink>
+          <NavLink to="/" title="Home">
+            {siteTitle}
+          </NavLink>
         </Brand>
         <Ul>
           <Li>
-            <CustomLink to="/projects">Projects</CustomLink>
+            <NavLink
+              to="/projects"
+              title="Projects"
+              partiallyActive={true}
+              activeStyle={activeStyle}
+            >
+              Projects
+            </NavLink>
           </Li>
-          {/* <Li>
-          <CustomLink to="/blog">Blog</CustomLink>
-        </Li> */}
           <Li>
-            <CustomLink to="/about">About</CustomLink>
+            <NavLink
+              to="/about"
+              title="About"
+              partiallyActive={true}
+              activeStyle={activeStyle}
+            >
+              About
+            </NavLink>
           </Li>
           <Li>
-            <CustomLink to="/contact">contact</CustomLink>
+            <NavLink
+              to="/contact"
+              title="Contact"
+              partiallyActive={true}
+              activeStyle={activeStyle}
+            >
+              Contact
+            </NavLink>
           </Li>
           <Li>
             <DarkModeToggle />
