@@ -17,21 +17,4 @@ const CustomLink = styled(props => <Link {...props} />)`
   }
 `
 
-export default ({
-  to = "",
-  style,
-  children,
-  title = "",
-  partiallyActive = false,
-  activeStyle = {},
-}) => (
-  <CustomLink
-    style={style}
-    to={to}
-    title={title}
-    partiallyActive={partiallyActive}
-    activeStyle={activeStyle}
-  >
-    {children}
-  </CustomLink>
-)
+export default CustomLink
