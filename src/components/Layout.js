@@ -3,21 +3,20 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import "typeface-noto-sans"
 
-import Container from "./Container"
 import Footer from "./Footer"
 import Header from "../components/Header"
 
 const Root = styled.div`
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
   background-color: var(--primaryColor);
   color: var(--primaryText);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   transition: color 0.2s ease-out, background 0.2s ease-out;
 `
 
 const Main = styled.main`
-  height: 100%;
+  flex: 1;
 `
 
 const Layout = ({ children }) => {
@@ -34,9 +33,7 @@ const Layout = ({ children }) => {
   return (
     <Root>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Main>
-        <Container>{children}</Container>
-      </Main>
+      <Main>{children}</Main>
       <Footer />
     </Root>
   )
