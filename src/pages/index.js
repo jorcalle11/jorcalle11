@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Emoji from "../components/Emoji"
+import Container from "../components/Container"
 
 const Div = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const H1 = styled.h1`
 const P = styled.p`
   font-size: 1.2rem;
   margin-top: 0;
+  text-align: center;
 `
 
 const CustomLink = styled(Link)`
@@ -37,26 +39,29 @@ const CustomLink = styled(Link)`
   padding: 0 1rem;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   &&:hover {
     background-color: #d32f2f;
+    text-decoration: none;
   }
 `
 
 export default () => (
   <Layout>
     <SEO title="Home" />
-    <Div>
-      <H1>
-        Hi there!
-        <Emoji label="hi" children="👋️" />
-      </H1>
-      <P>
-        I'm <b>Jorge Calle</b> and I am a <b>Javascript Developer</b> from
-        Sahagún (CO) with more than 4 years of experience writing code in both
-        Front-end and Back-end side.
-      </P>
-      <CustomLink to="/contact">Contact me</CustomLink>
-    </Div>
+    <Container>
+      <Div>
+        <H1>
+          Hi there! <Emoji label="hi" title="hi" children="👋️" />
+        </H1>
+        <P>
+          I'm <b>Jorge Calle</b> and I am a <b>Javascript Developer</b> from
+          Sahagún (CO) with more than 4 years of experience writing code in both
+          Front-end and Back-end side.
+        </P>
+        <CustomLink to="/contact">Contact me!</CustomLink>
+      </Div>
+    </Container>
   </Layout>
 )
