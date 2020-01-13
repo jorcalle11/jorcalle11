@@ -45,7 +45,7 @@ const Uses = () => (
           </Item>
           <Item>
             My favorite editor themes are{" "}
-            <a href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-oneItemght">
+            <a href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight">
               Atom One Light
             </a>{" "}
             for the day and{" "}
@@ -57,12 +57,12 @@ const Uses = () => (
           <Item>
             My font is{" "}
             <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which
-            come with programming Itemgatures.
+            come with programming ligatures.
           </Item>
           <Item>
             I use <b>zsh</b> as my bash interpreter and{" "}
-            <a href="https://github.com/ohmyzsh/ohmyzsh">oh my zsh</a> Itemke my
-            tool for handItemng the zsh configuration.
+            <a href="https://github.com/ohmyzsh/ohmyzsh">oh my zsh</a> like my
+            tool for handling the zsh configuration.
           </Item>
           <Item>
             I use{" "}
@@ -84,8 +84,8 @@ const Uses = () => (
           </Item>
           <Item>
             I use{" "}
-            <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-esItemnt">
-              EsItemnt
+            <a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">
+              Eslint
             </a>{" "}
             and{" "}
             <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">
@@ -103,9 +103,9 @@ const Uses = () => (
           <Item>
             I use
             <a href="https://todo.microsoft.com/tasks/">
-              Microsoft todo Itemst
+              Microsoft todo list
             </a>{" "}
-            as my daily to-do Itemst.
+            as my daily to-do list.
           </Item>
           <Item>
             <a href="https://trello.com/">Trello</a> is where I organize and
@@ -114,7 +114,7 @@ const Uses = () => (
           <Item>
             I use <a href="https://www.grammarly.com/">Grammarly</a> to write
             ideas and also to check my texts in order to avoid errors and find
-            the perfect words to express me when I need to write in EngItemsh.
+            the perfect words to express me when I need to write in english.
           </Item>
           <Item>
             I use <a href="https://www.getpostman.com/">Postman</a> to test APIs
@@ -144,8 +144,8 @@ const Uses = () => (
           </Item>
           <Item>
             I use the{" "}
-            <a href="https://www.amazon.com/WALI-Monitor-Adjustable-Capacity-M002/dp/B018MSDG84/ref=sr_1_fkmr0_1?keywords=waItem+dual+monitor+desk+stand+up+to+27&qid=1578782460&sr=8-1-fkmr0">
-              WaItem dual monitor desk stand
+            <a href="https://www.amazon.com/WALI-Monitor-Adjustable-Capacity-M002/dp/B018MSDG84/ref=sr_1_fkmr0_1?keywords=wali+dual+monitor+desk+stand+up+to+27&qid=1578782460&sr=8-1-fkmr0">
+              Wali dual monitor desk stand
             </a>{" "}
             to hang my monitors.
           </Item>
@@ -154,8 +154,8 @@ const Uses = () => (
             <a href="https://www.amazon.com/gp/product/B071YTQBXM/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1">
               Dell D6000
             </a>{" "}
-            universal dock to connect all of my peripherals Itemke mouse,
-            keyboard, ethernet with only a single cable running on my machine.
+            universal dock to connect all of my peripherals such as mouse,
+            keyboard, monitors, ethernet with only a single cable running on my machine.
           </Item>
           <Item>
             I use a{" "}
