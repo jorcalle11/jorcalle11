@@ -29,6 +29,9 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
