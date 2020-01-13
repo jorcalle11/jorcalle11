@@ -53,10 +53,10 @@ export default () => (
     <Container>
       <Div>
         <H1>
-          Hi there! <Emoji label="hi" title="hi" children="👋️" />
+          Hello world! <Emoji label="hi" title="hi" children="👋️" />
         </H1>
         <P>
-          I'm <b>Jorge Calle</b> and I am a <b>Javascript Developer</b> from
+          I'm <b>Jorge Calle</b> and I'm a <b>Javascript Developer</b> from
           Sahagún (CO) with more than 4 years of experience writing code in both
           Front-end and Back-end side.
         </P>
