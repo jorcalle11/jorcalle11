@@ -51,36 +51,18 @@ const Header = ({ siteTitle }) => (
           </NavLink>
         </Brand>
         <Ul>
-          <Li>
-            <NavLink
-              to="/projects"
-              title="Projects"
-              partiallyActive={true}
-              activeStyle={activeStyle}
-            >
-              Projects
-            </NavLink>
-          </Li>
-          <Li>
-            <NavLink
-              to="/about"
-              title="About"
-              partiallyActive={true}
-              activeStyle={activeStyle}
-            >
-              About
-            </NavLink>
-          </Li>
-          <Li>
-            <NavLink
-              to="/contact"
-              title="Contact"
-              partiallyActive={true}
-              activeStyle={activeStyle}
-            >
-              Contact
-            </NavLink>
-          </Li>
+          {["Projects", "About", "Contact"].map(section => (
+            <Li>
+              <NavLink
+                to={`/${section.toLowerCase()}`}
+                title={section}
+                partiallyActive={true}
+                activeStyle={activeStyle}
+              >
+                {section}
+              </NavLink>
+            </Li>
+          ))}
           <Li>
             <DarkModeToggle />
           </Li>
