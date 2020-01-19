@@ -44,7 +44,7 @@ const Uses = () => (
             as my terminal.
           </Item>
           <Item>
-            My favorite editor themes are{" "}
+            My favorite themes are{" "}
             <a href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight">
               Atom One Light
             </a>{" "}
@@ -101,7 +101,7 @@ const Uses = () => (
         </h2>
         <ul>
           <Item>
-            I use
+            I use {" "}
             <a href="https://todo.microsoft.com/tasks/">
               Microsoft todo list
             </a>{" "}
@@ -158,18 +158,18 @@ const Uses = () => (
             keyboard, monitors, ethernet with only a single cable running on my machine.
           </Item>
           <Item>
-            I use a{" "}
+            I use an{" "}
             <a href="https://www.amazon.com/gp/product/B01FXF7HFC/ref=ppx_yo_dt_b_asin_image_o06_s00?ie=UTF8&psc=1">
               E-Element Z-88
             </a>{" "}
-            Mechanical Gaming Keyboard.
+            mechanical gaming keyboard.
           </Item>
           <Item>
             I have a{" "}
             <a href="https://www.amazon.com/gp/product/B0043T7FXE/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1">
               Logitech M570
             </a>{" "}
-            Wireless Trackball Mouse.
+            wireless trackball mouse.
           </Item>
           <Item>
             Desk chair is an{" "}
