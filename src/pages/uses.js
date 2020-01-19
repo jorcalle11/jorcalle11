@@ -21,14 +21,6 @@ const Uses = () => (
         specific of some piece of software or hardware that I use day to day,
         then you are in the right section. <Emoji label="wink" children="😉" />
       </p>
-      <p>
-        If you have a question about some of the items below, feel free to reach
-        out to me in the{" "}
-        <Link to="/contact" style={{ color: "var(--accentColor)" }}>
-          contact
-        </Link>{" "}
-        page.
-      </p>
       <Section>
         <h2>
           <Emoji label="editor" children="📑" /> Editor + Terminal
@@ -101,10 +93,8 @@ const Uses = () => (
         </h2>
         <ul>
           <Item>
-            I use {" "}
-            <a href="https://todo.microsoft.com/tasks/">
-              Microsoft todo list
-            </a>{" "}
+            I use{" "}
+            <a href="https://todo.microsoft.com/tasks/">Microsoft todo list</a>{" "}
             as my daily to-do list.
           </Item>
           <Item>
@@ -155,7 +145,8 @@ const Uses = () => (
               Dell D6000
             </a>{" "}
             universal dock to connect all of my peripherals such as mouse,
-            keyboard, monitors, ethernet with only a single cable running on my machine.
+            keyboard, monitors, ethernet with only a single cable running on my
+            machine.
           </Item>
           <Item>
             I use an{" "}
@@ -179,6 +170,14 @@ const Uses = () => (
           </Item>
         </ul>
       </Section>
+      <p>
+        If you have a question about some of the above items, feel free to reach
+        out to me in the{" "}
+        <Link to="/contact" style={{ color: "var(--accentColor)" }}>
+          contact
+        </Link>{" "}
+        page.
+      </p>
     </Container>
   </Layout>
 )
