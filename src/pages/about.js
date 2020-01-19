@@ -14,7 +14,10 @@ const Div = styled.div`
 
   @media (min-width: 768px) {
     flex-flow: row !important;
-    justify-content:space-around;
+  }
+
+  div {
+    margin-right: 30px;
   }
 `
 
@@ -37,7 +40,7 @@ const About = () => (
         <a href="https://condorlabs.io/">Condor labs</a> as a senior backend
         developer, and parallel to my work, I expend my time training and
         learning every day about javascript and technologies such as{" "}
-        <b>Node.js</b>, <b>React</b>, <b>Firebase</b>, <b>Docker</b> and{" "}
+        <b>Node.js</b>, <b>React</b>, <b>Firebase</b> and{" "}
         <b>AWS services</b>.
       </p>
       <p>
@@ -68,7 +71,6 @@ const About = () => (
               <Item>React</Item>
               <Item>Redux</Item>
               <Item>Styled components</Item>
-              <Item>Webpack</Item>
               <Item>Mobile first and Responsive Design</Item>
             </ul>
           </div>
@@ -76,6 +78,7 @@ const About = () => (
             <H4>Backend</H4>
             <ul>
               <Item>Node.js</Item>
+              <Item>Express.js</Item>
               <Item>Mongo DB</Item>
               <Item>MySQL</Item>
               <Item>Firebase</Item>
@@ -83,7 +86,6 @@ const About = () => (
               <Item>Redis</Item>
               <Item>Microservices</Item>
               <Item>Serverless</Item>
-              <Item>Docker</Item>
             </ul>
           </div>
         </Div>
