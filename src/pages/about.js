@@ -40,8 +40,7 @@ const About = () => (
         <a href="https://condorlabs.io/">Condor labs</a> as a senior backend
         developer, and parallel to my work, I expend my time training and
         learning every day about javascript and technologies such as{" "}
-        <b>Node.js</b>, <b>React</b>, <b>Firebase</b> and{" "}
-        <b>AWS services</b>.
+        <b>Node.js</b>, <b>React</b>, <b>Firebase</b> and <b>AWS services</b>.
       </p>
       <p>
         I'm from{" "}
@@ -49,9 +48,11 @@ const About = () => (
           Sahagún (CO)
         </a>
         , I'm a Father, I like sports, watch TV series and football, I like to
-        play videogames, read books about technology and also learn new things.
+        play videogames, read books about technology and also, learn new things.
+      </p>
+      <p>
         When I'm not coding or I'm not in front of a screen, it is because I'm
-        playing with my little daughter, visiting my family or friends.
+        playing with my little daughter, visiting my family or friends. 
       </p>
       <section>
         <h2>Skills</h2>
