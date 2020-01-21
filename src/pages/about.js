@@ -1,12 +1,13 @@
 import React from "react"
+import styled from "styled-components"
 
 import Container from "../components/Container"
+import Emoji from "../components/Emoji"
+import Item from "../components/Item"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
 import SocialMedia from "../components/SocialMedia"
-import Item from "../components/Item"
-import styled from "styled-components"
 
 const Div = styled.div`
   display: flex;
@@ -29,7 +30,9 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <Container>
-      <h1>Hi there! 👋</h1>
+      <h1>
+        Hi there! <Emoji label="greeting" children="👋" />
+      </h1>
       <p>
         My name is Jorge Calle, I'm a <b>system engineer</b> and a{" "}
         <b>javascript developer</b> with more than 4 years of experience writing
@@ -52,7 +55,7 @@ const About = () => (
       </p>
       <p>
         When I'm not coding or I'm not in front of a screen, it is because I'm
-        playing with my little daughter, visiting my family or friends. 
+        playing with my little daughter, visiting my family or friends.
       </p>
       <section>
         <h2>Skills</h2>
