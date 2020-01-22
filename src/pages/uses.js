@@ -119,7 +119,7 @@ const Uses = () => (
         <ul>
           <Item>
             My current machine is a Dell XPS 15 Notebook 7590 i7 2.60HGz with
-            8GB of RAM and a NVIDIA GeForce GTX 1650.
+            20GB of RAM and a NVIDIA GeForce GTX 1650.
           </Item>
           <Item>
             I use <b>Ubuntu</b> as operative system and Windows 10 just for play
