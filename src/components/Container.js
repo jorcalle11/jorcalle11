@@ -2,18 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 const ContainerFluid = styled(props => <div {...props} />)`
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px auto;
+  padding: 0px 20px;
   height: 100%;
 `
 
 const Container = styled(ContainerFluid)`
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
-
   @media (min-width: 768px) {
     max-width: 720px;
   }
