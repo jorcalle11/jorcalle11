@@ -6,22 +6,12 @@ import Avatar from "./Avatar"
 import Container from "./Container"
 import DarkModeToggle from "./DarkModeToggle"
 import NavLink from "./Link"
+import HamburgerButton from "./HamburgerButton"
 
 export default function Header({ siteTitle }) {
   const links = ["Projects", "About", "Contact"]
-
-  const renderItem = item => (
-    <Li key={item}>
-      <NavLink
-        to={`/${item.toLowerCase()}`}
-        title={item}
-        partiallyActive={true}
-        activeStyle={activeStyle}
-      >
-        {item}
-      </NavLink>
-    </Li>
-  )
+  const [isOpen, setIsOpen] = React.useState(false)
+  const handleClick = () => setIsOpen(prevState => !prevState)
 
   return (
     <CustomHeader>
@@ -37,11 +27,27 @@ export default function Header({ siteTitle }) {
               <DarkModeToggle />
             </Li>
           </DesktopMenu>
+          <CustomHamburgerButton onClick={handleClick} />
         </Nav>
       </Container>
+      <Overlay show={isOpen} />
+      <MobileMenu show={isOpen}>{links.map(renderItem)}</MobileMenu>
     </CustomHeader>
   )
 }
+
+const renderItem = item => (
+  <Li key={item}>
+    <NavLink
+      to={`/${item.toLowerCase()}`}
+      title={item}
+      partiallyActive={true}
+      activeStyle={{ color: "var(--accentColor)" }}
+    >
+      {item}
+    </NavLink>
+  </Li>
+)
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -79,14 +85,62 @@ const Brand = styled(NavLink)`
 const DesktopMenu = styled.ul`
   margin: 0;
   padding: 0;
-  display: flex;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `
+
 const Li = styled.li`
   list-style-type: none;
   padding: 0px 5px;
   margin: 0;
 `
-const activeStyle = {
-  color: "var(--accentColor)",
-}
 
+const CustomHamburgerButton = styled(HamburgerButton)`
+  display: block;
+  z-index: 30;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: ${props => (props.show ? "1" : "0")};
+  display: ${props => (props.show ? "block" : "none")};
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+
+const MobileMenu = styled.ul`
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 50vw;
+  background-color: var(--primaryColor);
+  display: ${props => (props.show ? "block" : "none")};
+  padding: 120px 20px 0px 0px;
+  text-align: right;
+
+  li {
+    padding: 10px 0;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
