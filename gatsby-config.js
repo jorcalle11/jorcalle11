@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#F44336`,
         theme_color: `#F44336`,
         display: `minimal-ui`,
-        icon: `src/images/jomaca.png`, // This path is relative to the root of the site.
+        icon: `src/images/jorge_calle_150.png`, // This path is relative to the root of the site.
       },
     },
   ],
