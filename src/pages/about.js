@@ -20,8 +20,8 @@ const About = () => (
         <p>
           My name is Jorge Calle, I'm a <b>System Engineer</b> and a{" "}
           <b>JavaScript developer</b>. I currently work at{" "}
-          <a href="https://condorlabs.io/">Condor labs</a> as Senior Backend
-          developer. I have been there for 3 years.
+          <a href="https://condorlabs.io/">Condor labs</a> as{" "}
+          <b>Senior Backend developer</b>.
         </p>
         <p>
           At the same time, I dedicate part of my time to continue training and
@@ -39,13 +39,13 @@ const About = () => (
           <a href="https://es.wikipedia.org/wiki/Sahag%C3%BAn_(Colombia)">
             Sahagún
           </a>
-          , I'm a father of a 5 years old girl, I Itemke sports, I Itemke to
-          watch football and TV series, I Itemke to play videogames, I Itemke to
-          read technical books and also learn new things.
+          , I'm a father of a 5 years old girl, I like sports, I like to watch
+          football and TV series, I like to play videogames, I like to read
+          technical books and also learn new things.
         </p>
         <p>
           When I'm not coding or I'm not in front of a screen, it is because I'm
-          playing with my Itemttle daughter, visiting my family or friends.
+          playing with my little daughter, visiting my family or friends.
         </p>
       </section>
       <section id="skills">
