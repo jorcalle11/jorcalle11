@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import avatar from "../images/jorge_calle.png"
+import avatar from "../images/jorge_calle_110.png"
 
 export default function Avatar() {
   return <Img src={avatar} alt="Jorge Calle" width="60" height="60" />
