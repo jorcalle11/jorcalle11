@@ -9,7 +9,7 @@ import NavLink from "./Link"
 import HamburgerButton from "./HamburgerButton"
 
 export default function Header({ siteTitle }) {
-  const links = ["Projects", "About", "Contact"]
+  const links = ["Projects", "About", "Uses", "Contact"]
   const [isOpen, setIsOpen] = React.useState(false)
   const handleClick = () => setIsOpen(prevState => !prevState)
 
