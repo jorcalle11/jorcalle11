@@ -8,8 +8,6 @@ import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
 import SocialMedia from "../components/SocialMedia"
-import avatar350 from "../images/jorge_calle_350.png"
-import avatar200 from "../images/jorge_calle_200.png"
 
 const About = () => (
   <Layout>
@@ -19,7 +17,6 @@ const About = () => (
         <h1>
           Hi there! <Emoji label="greeting" children="👋" />
         </h1>
-        <Photo />
         <p>
           My name is Jorge Calle, I'm a <b>System Engineer</b> and a{" "}
           <b>JavaScript developer</b>. I currently work at{" "}
@@ -111,18 +108,6 @@ const About = () => (
   </Layout>
 )
 
-function Photo() {
-  return (
-    <Figure>
-      <picture>
-        <source media="(max-width: 480px)" srcset={avatar200} />
-        <source sizes="(min-width: 500px)" srcSet={avatar350} />
-        <img alt="Jorge Calle" src={avatar200} />
-      </picture>
-    </Figure>
-  )
-}
-
 function Skill({ title, items = [] }) {
   return (
     <div>
@@ -140,25 +125,6 @@ function Experience({ company, children }) {
     </div>
   )
 }
-
-const Figure = styled.figure`
-  display: block;
-  text-align: center;
-  margin: 0;
-  float: right;
-
-  img {
-    width: 150px;
-    height: auto;
-  }
-
-  @media (min-width: 768px) {
-    img {
-      width: 300px;
-      height: auto;
-    }
-  }
-`
 
 const SectionTitle = styled.h2`
   margin-top: 40px;

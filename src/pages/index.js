@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Emoji from "../components/Emoji"
 import Container from "../components/Container"
+import Photo from "../components/Photo"
 
 const Div = styled.div`
   display: flex;
@@ -17,11 +18,11 @@ const Div = styled.div`
 
 const H1 = styled.h1`
   font-size: 2.5rem;
+  margin-top: 0;
 `
 
 const P = styled.p`
   font-size: 1.2rem;
-  margin-top: 0;
   text-align: center;
 `
 
@@ -55,10 +56,11 @@ export default () => (
         <H1>
           Hello world! <Emoji label="hi" title="hi" children="👋️" />
         </H1>
+        <Photo borderRadius="5%" />
         <P>
-          I'm <b>Jorge Calle</b> and I'm a <b>Javascript Developer</b> from
-          Sahagún (CO) with more than 4 years of experience writing code in both
-          Front-end and Back-end side.
+          I'm <b>Jorge Calle</b>, I'm a <b>System Engineer</b> and a{" "}
+          <b>JavaScript Developer</b> from Sahagún with more than 4 years of
+          experience writing code in both Frontend and Backend side.
         </P>
         <CustomLink to="/contact">Contact me!</CustomLink>
       </Div>
