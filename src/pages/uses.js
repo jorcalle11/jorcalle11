@@ -7,19 +7,16 @@ import Item from "../components/Item"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
-
-const Section = styled.section`
-  margin-bottom: 2rem;
-`
+import homeOffice from "../images/home_office_800.jpg"
 
 const Uses = () => (
   <Layout>
     <SEO title="Uses" />
     <Container>
       <p>
-        Welcome to my "uses" page! If you maybe are interested about the
-        specific of some piece of software or hardware that I use day to day,
-        then you are in the right section. <Emoji label="wink" children="😉" />
+        Welcome to my uses page. If you are here it is because maybe you are
+        interested in the specific of some piece of software or hardware that I
+        use every day.
       </p>
       <Section>
         <h2>
@@ -49,23 +46,12 @@ const Uses = () => (
           <Item>
             My font is{" "}
             <a href="https://github.com/tonsky/FiraCode">Fira Code</a>, which
-            come with programming ligatures.
+            comes with programming ligatures.
           </Item>
           <Item>
-            I use <b>zsh</b> as my bash interpreter and{" "}
-            <a href="https://github.com/ohmyzsh/ohmyzsh">oh my zsh</a> like my
-            tool for handling the zsh configuration.
-          </Item>
-          <Item>
-            I use{" "}
-            <a href="https://github.com/zsh-users/zsh-autosuggestions">
-              zsh autosuggestions
-            </a>{" "}
-            as zsh plugin and{" "}
-            <a href="https://github.com/jorcalle11/custom-zsh-themes">
-              robbyrussell-modified
-            </a>{" "}
-            as my custom zsh theme.
+            I use <b>zsh</b> as my bash interpreter with a{" "}
+            <a href="https://github.com/jorcalle11/custom-zsh-themes">custom</a>{" "}
+            oh my zsh theme.
           </Item>
           <Item>
             The{" "}
@@ -102,13 +88,13 @@ const Uses = () => (
             create cards for my personal and works projects.
           </Item>
           <Item>
-            I use <a href="https://www.grammarly.com/">Grammarly</a> to write
-            ideas and also to check my texts in order to avoid errors and find
-            the perfect words to express me when I need to write in english.
+            I use <a href="https://www.grammarly.com/">Grammarly</a> as my
+            assistant to check typos and spelling errors when I writing in
+            English.
           </Item>
           <Item>
-            I use <a href="https://www.getpostman.com/">Postman</a> to test APIs
-            requests.
+            I use <a href="https://www.getpostman.com/">Postman</a> to test
+            APIs.
           </Item>
         </ul>
       </Section>
@@ -122,8 +108,8 @@ const Uses = () => (
             20GB of RAM and a NVIDIA GeForce GTX 1650.
           </Item>
           <Item>
-            I use <b>Ubuntu</b> as operative system and Windows 10 just for play
-            videogames.
+            I use <b>Ubuntu</b> as my primary OS and <b>Windows 10</b> just for
+            play videogames.
           </Item>
           <Item>
             I have two{" "}
@@ -144,7 +130,7 @@ const Uses = () => (
             <a href="https://www.amazon.com/gp/product/B071YTQBXM/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1">
               Dell D6000
             </a>{" "}
-            universal dock to connect all of my peripherals such as mouse,
+            universal dock to connect all of my peripherals such as a mouse,
             keyboard, monitors, ethernet with only a single cable running on my
             machine.
           </Item>
@@ -165,14 +151,20 @@ const Uses = () => (
           <Item>
             Desk chair is an{" "}
             <a href="https://www.homecenter.com.co/homecenter-co/product/186683/Silla-Ejecutiva-Cromada-con-Brazos-Negra/186683">
-              Asenti Home collection
+              Asenti Home collection.
             </a>
           </Item>
         </ul>
       </Section>
+      <Section>
+        <h2>
+          <Emoji label="camera" children="📷" /> My Home Office
+        </h2>
+        <Img src={homeOffice} alt="Home Office" />
+      </Section>
       <p>
-        If you have a question about some of the above items, feel free to reach
-        out to me in the{" "}
+        If you have any questions about any of the above items, feel free to
+        reach out to me in the{" "}
         <Link to="/contact" style={{ color: "var(--accentColor)" }}>
           contact
         </Link>{" "}
@@ -181,5 +173,19 @@ const Uses = () => (
     </Container>
   </Layout>
 )
+
+const Section = styled.section`
+  margin-bottom: 2rem;
+`
+
+const Img = styled.img`
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+
+  @media (min-width: 768px) {
+    margin-left: 40px;
+  }
+`
 
 export default Uses
