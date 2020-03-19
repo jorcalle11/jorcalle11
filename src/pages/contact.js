@@ -73,6 +73,8 @@ const Contact = () => {
 }
 
 const Wrapper = styled.div`
+  margin-bottom: 1.5rem;
+
   @media (min-width: 768px) {
     max-width: 640px;
     margin-left: auto;
@@ -83,10 +85,10 @@ const Wrapper = styled.div`
 const Field = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
 
   label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     color: var(--secondaryText);
   }
 
@@ -97,7 +99,7 @@ const Field = styled.div`
     border-color: var(--primaryText);
     color: var(--primaryText);
     background: none;
-    padding: 0.9rem;
+    padding: 0.7rem;
     font-size: 1.2rem;
   }
 
@@ -108,6 +110,7 @@ const Field = styled.div`
 `
 
 const Submit = styled(Button)`
+  margin-top: 0.7rem;
   width: 100%;
 `
 
