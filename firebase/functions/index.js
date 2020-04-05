@@ -13,22 +13,21 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-exports.contact = functions.https.onRequest(async (request, response) => {
-  const { name, email, text } = request.body
-  const sender = `${name} - <${email}>`
+async function handleRequest(request, response) {
+  const { name, email, message } = request.body
+  const sender = `"jorgecalle.co 🤖"  <${functions.config().email.user}>`
   const receipt = "jorcalle11@gmail.com"
-  const subject = `Message of ${name} from jorgecalle.co`
-  const message = {
-    from: sender,
-    to: receipt,
-    subject,
-    text,
-  }
+  const subject = `Message from ${name} - ${email}`
 
   try {
     console.log(`>${name} Sending message...`)
     await transporter.verify()
-    const info = await transporter.sendMail(message)
+    const info = await transporter.sendMail({
+      from: sender,
+      to: receipt,
+      subject,
+      text: message,
+    })
     console.log("> Message sent: %s", info.messageId)
 
     response.send({
@@ -44,4 +43,6 @@ exports.contact = functions.https.onRequest(async (request, response) => {
       message: error.message,
     })
   }
-})
+}
+
+exports.contact = functions.https.onRequest(handleRequest)
