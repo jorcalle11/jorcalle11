@@ -8,19 +8,35 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 const Contact = () => {
-  const [name, setName] = React.useState("")
-  const [email, setEmail] = React.useState("")
-  const [message, setMessage] = React.useState("")
-  const handleNameChange = e => setName(e.target.value)
-  const handleEmailChange = e => setEmail(e.target.value)
-  const handleMessageChange = e => setMessage(e.target.value)
+  const [body, setBody] = React.useState("")
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const url = `${process.env.GATSBY_CLOUD_FUNCTION_URL}/contact`
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log({ name, email, message })
-    setEmail("")
-    setName("")
-    setMessage("")
+  const { data, error, fetching } = useFetch(url, body)
+  console.log({ fetching, error })
+
+  React.useEffect(() => {
+    if (fetching) {
+      setIsSubmitting(true)
+      return
+    }
+
+    if (data) {
+      setIsSubmitting(false)
+      console.log(data)
+      // navigate success page
+    }
+
+    if (error) {
+      setIsSubmitting(false)
+      console.error(error)
+    }
+  }, [fetching, data, error])
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    const values = getFormValues(event.target)
+    setBody(JSON.stringify(values))
   }
 
   return (
@@ -28,48 +44,93 @@ const Contact = () => {
       <SEO title="Contact" />
       <Container>
         <Wrapper>
-          <h2>Contact</h2>
           <p>
             Leave a message and say hello <Emoji label="smile" children="🙂" />
           </p>
           <form onSubmit={handleSubmit}>
             <Field>
               <label htmlFor="name">Name:</label>
-              <input
-                name="name"
-                type="text"
-                value={name}
-                onChange={handleNameChange}
-                required
-              />
+              <input id="name" name="name" type="text" required />
             </Field>
             <Field>
               <label htmlFor="email">Email:</label>
-              <input
-                name="email"
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-                required
-              />
+              <input id="email" name="email" type="email" required />
             </Field>
             <Field>
               <label htmlFor="message">Message:</label>
               <textarea
+                id="message"
+                style={{ fontFamily: "inherit" }}
                 name="message"
-                rows="5"
-                spellCheck={true}
-                value={message}
-                onChange={handleMessageChange}
+                rows="7"
+                minLength="10"
+                maxLength="1000"
+                spellCheck={false}
                 required
               />
             </Field>
-            <Submit type="submit">Submit</Submit>
+            {error && (
+              <Error>There was a problem 💥. Try again later 🙁 </Error>
+            )}
+            <Submit type="submit" disabled={isSubmitting}>
+              Submit
+            </Submit>
           </form>
         </Wrapper>
       </Container>
     </Layout>
   )
+}
+
+function useFetch(url, body) {
+  const [response, setResponse] = React.useState({
+    data: null,
+    error: null,
+    fetching: false,
+  })
+
+  React.useEffect(() => {
+    if (body) {
+      setResponse({ fetching: true, error: null })
+      sendMessage(url, body)
+        .then(data => setResponse({ data }))
+        .catch(error => setResponse({ error }))
+        .finally(() => setResponse(prev => ({ ...prev, fetching: false })))
+    }
+  }, [url, body])
+
+  return response
+}
+
+function sendMessage(url, body) {
+  return window
+    .fetch(url, {
+      method: "POST",
+      body,
+      headers: { "Content-Type": "application/json" },
+    })
+    .then(async response => {
+      const data = await response.json()
+
+      if (!response.ok) {
+        return Promise.reject(data)
+      }
+
+      return data
+    })
+}
+
+function getFormValues(formNode) {
+  const values = {}
+
+  for (const node of formNode.elements) {
+    const name = node.getAttribute("name")
+    if (name && !values[name]) {
+      values[name] = node.value
+    }
+  }
+
+  return values
 }
 
 const Wrapper = styled.div`
@@ -107,6 +168,10 @@ const Field = styled.div`
   textarea:focus {
     outline: none;
   }
+`
+
+const Error = styled.p`
+  color: var(--accentColor);
 `
 
 const Submit = styled(Button)`
