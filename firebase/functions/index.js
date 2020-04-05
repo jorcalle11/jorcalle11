@@ -2,6 +2,23 @@
 
 const functions = require("firebase-functions")
 const nodemailer = require("nodemailer")
+const unified = require("unified")
+const markdown = require("remark-parse")
+const remark2rehype = require("remark-rehype")
+const doc = require("rehype-document")
+const format = require("rehype-format")
+const html = require("rehype-stringify")
+
+function markdownToHtml(markdownString) {
+  return unified()
+    .use(markdown)
+    .use(remark2rehype)
+    .use(doc)
+    .use(html)
+    .use(format)
+    .process(markdownString)
+    .then(res => res.contents)
+}
 
 const transporter = nodemailer.createTransport({
   host: "mail.privateemail.com",
@@ -20,16 +37,18 @@ async function handleRequest(request, response) {
   const subject = `Message from ${name} - ${email}`
 
   try {
-    console.log(`>${name} Sending message...`)
+    const html = await markdownToHtml(message)
     await transporter.verify()
+
+    console.log(`>${name} Sending message...`)
     const info = await transporter.sendMail({
       from: sender,
       to: receipt,
       subject,
-      text: message,
+      html,
     })
-    console.log("> Message sent: %s", info.messageId)
 
+    console.log("> Message sent: %s", info.messageId)
     response.send({
       statusCode: 200,
       code: "Ok",
