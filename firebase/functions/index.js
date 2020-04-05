@@ -34,7 +34,7 @@ async function handleRequest(request, response) {
   const { name, email, message } = request.body
   const sender = `"jorgecalle.co 🤖"  <${functions.config().email.user}>`
   const receipt = "jorcalle11@gmail.com"
-  const subject = `Message from ${name} - ${email}`
+  const subject = `Message of ${name} - ${email}`
 
   try {
     const html = await markdownToHtml(message)
