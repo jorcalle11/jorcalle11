@@ -6,9 +6,15 @@ export default function Button({
   children,
   style = {},
   type = "button",
+  disabled = false,
 }) {
   return (
-    <CustomButton className={className} style={style} type={type}>
+    <CustomButton
+      className={className}
+      style={style}
+      type={type}
+      disabled={disabled}
+    >
       {children}
     </CustomButton>
   )
@@ -28,8 +34,13 @@ const CustomButton = styled.button`
   padding: 0 1rem;
   text-decoration: none;
 
-  &&:hover {
+  &&:hover:not(:disabled) {
     background-color: #d32f2f;
     text-decoration: none;
+  }
+
+  &&:disabled {
+    opacity: 0.6;
+    cursor: auto;
   }
 `
