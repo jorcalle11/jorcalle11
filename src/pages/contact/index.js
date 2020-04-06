@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { navigate } from "gatsby"
 
 import Button from "../../components/Button"
 import Container from "../../components/Container"
@@ -10,10 +11,9 @@ import SEO from "../../components/Seo"
 const Contact = () => {
   const [body, setBody] = React.useState("")
   const [isSubmitting, setIsSubmitting] = React.useState(false)
-  const url = `${process.env.GATSBY_CLOUD_FUNCTION_URL}/contact`
 
+  const url = `${process.env.GATSBY_FIREBASE_FUNCTIONS_URL}/contact`
   const { data, error, fetching } = useFetch(url, body)
-  console.log({ fetching, error })
 
   React.useEffect(() => {
     if (fetching) {
@@ -22,16 +22,15 @@ const Contact = () => {
     }
 
     if (data) {
-      setIsSubmitting(false)
-      console.log(data)
-      // navigate success page
+      const { name } = JSON.parse(body)
+      navigate("/contact/success", { state: { name } })
     }
 
     if (error) {
       setIsSubmitting(false)
       console.error(error)
     }
-  }, [fetching, data, error])
+  }, [fetching, data, body, error])
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -57,7 +56,9 @@ const Contact = () => {
               <input id="email" name="email" type="email" required />
             </Field>
             <Field>
-              <label htmlFor="message">Message:</label>
+              <label htmlFor="message">
+                Message: (**markdown** _supported_)
+              </label>
               <textarea
                 id="message"
                 style={{ fontFamily: "inherit" }}
@@ -70,7 +71,11 @@ const Contact = () => {
               />
             </Field>
             {error && (
-              <Error>There was a problem 💥. Try again later 🙁 </Error>
+              <Error>
+                There was a problem <Emoji label="boom" children="💥" />. Try
+                again later{" "}
+                <Emoji label="slighly_frowling_face" children="🙁" />{" "}
+              </Error>
             )}
             <Submit type="submit" disabled={isSubmitting}>
               Submit
