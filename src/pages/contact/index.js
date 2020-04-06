@@ -61,7 +61,6 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
-                style={{ fontFamily: "inherit" }}
                 name="message"
                 rows="7"
                 minLength="10"
