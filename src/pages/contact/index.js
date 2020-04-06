@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import Button from "../components/Button"
-import Container from "../components/Container"
-import Emoji from "../components/Emoji"
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Button from "../../components/Button"
+import Container from "../../components/Container"
+import Emoji from "../../components/Emoji"
+import Layout from "../../components/Layout"
+import SEO from "../../components/Seo"
 
 const Contact = () => {
   const [body, setBody] = React.useState("")
