@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "public": true
+  "public": true,
+  "build": {
+    "env": {
+      "GATSBY_FIREBASE_FUNCTIONS_URL": "@gatsby-firebase-funtions-url"
+    }
+  }
 }
