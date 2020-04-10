@@ -9,7 +9,7 @@ body {
   display: flex !important;
   flex-direction: column !important;
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Inter Regular", sans-serif;
   font-size: 1rem;
 }
 

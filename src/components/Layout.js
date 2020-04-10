@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import "typeface-noto-sans"
+import "typeface-inter"
 
 import Footer from "./Footer"
 import Header from "../components/Header"
