@@ -9,6 +9,7 @@ const doc = require("rehype-document")
 const format = require("rehype-format")
 const html = require("rehype-stringify")
 const cors = require("cors")({ origin: true })
+const ow = require("ow")
 
 function markdownToHtml(markdownString) {
   return unified()
@@ -31,8 +32,30 @@ const transporter = nodemailer.createTransport({
   },
 })
 
+function validateInputs(input = {}) {
+  ow(input.name, "Name is too short", ow.string.minLength(1))
+  ow(input.name, "Name is too long", ow.string.maxLength(60))
+
+  const isEmail = ow.string.is(e => /^.+@.+\..+$/.test(e))
+  ow(input.email, "Email is invalid", isEmail)
+
+  ow(input.message, "Message is too short", ow.string.minLength(10))
+  ow(input.message, "Message is too long", ow.string.maxLength(1001))
+}
+
 function handleRequest(request, response) {
   return cors(request, response, async () => {
+    try {
+      validateInputs(request.body)
+    } catch (error) {
+      console.log("> Validation failed", error.message)
+      response.status(400).send({
+        statusCode: 400,
+        message: error.message,
+      })
+      return
+    }
+
     const { name, email, message } = request.body
     const sender = `"jorgecalle.co 🤖"  <${functions.config().email.user}>`
     const receipt = '"Jorge" <jorcalle11@gmail.com>'
