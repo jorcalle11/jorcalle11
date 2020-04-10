@@ -59,7 +59,7 @@ const Contact = () => {
               <label htmlFor="message">
                 Message: (**markdown** _supported_)
               </label>
-              <textarea
+              <Textarea
                 id="message"
                 name="message"
                 rows="7"
@@ -157,8 +157,7 @@ const Field = styled.div`
     color: var(--secondaryText);
   }
 
-  input,
-  textarea {
+  input {
     border-width: 0.1rem;
     border-style: solid;
     border-color: var(--primaryText);
@@ -168,8 +167,24 @@ const Field = styled.div`
     font-size: 1.2rem;
   }
 
-  input:focus,
-  textarea:focus {
+  input:focus {
+    outline: none;
+  }
+`
+
+const Textarea = styled.textarea`
+  background: none;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: var(--primaryText);
+  font-family: "Inter Regular", sans-serif;
+  font-size: 1.2rem;
+  color: var(--primaryText);
+  padding: 0.7rem;
+  overflow: auto;
+  resize: none;
+
+  &:focus {
     outline: none;
   }
 `
