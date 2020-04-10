@@ -30,7 +30,39 @@ const transporter = nodemailer.createTransport({
   },
 })
 
+function isAvalidRequest(request) {
+  const { hostname } = request
+  const whiteList = ["jorgecalle.co", "console.cloud.google.com"]
+
+  if (whiteList.includes(hostname) || hostname.includes("jorcalle11.now.sh")) {
+    return true
+  } else {
+    return false
+  }
+}
+
 async function handleRequest(request, response) {
+  response.set("Access-Control-Allow-Origin", "*")
+
+  if (!isAvalidRequest(request)) {
+    response.status(403).send({
+      statusCode: 403,
+      message: "Unacceptable request",
+    })
+    return
+  }
+
+  if (request.method === "OPTIONS") {
+    // Send response to OPTIONS requests
+    response.set("Access-Control-Allow-Methods", "GET,POST")
+    response.set("Access-Control-Allow-Headers", "Content-Type")
+    response.send({
+      statusCode: 200,
+      message: "CORS ok",
+    })
+    return
+  }
+
   const { name, email, message } = request.body
   const sender = `"jorgecalle.co 🤖"  <${functions.config().email.user}>`
   const receipt = "jorcalle11@gmail.com"
@@ -53,7 +85,6 @@ async function handleRequest(request, response) {
     console.log("> Message sent: %s", info.messageId)
     response.send({
       statusCode: 200,
-      code: "Ok",
       message: `message sent ${info.messageId}`,
     })
   } catch (error) {
