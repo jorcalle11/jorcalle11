@@ -1,14 +1,4 @@
 {
   "version": 2,
-  "name": "jorcalle11",
-  "alias": "jorgecalle.co",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ]
+  "public": true
 }
