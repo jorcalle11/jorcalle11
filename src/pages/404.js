@@ -11,7 +11,6 @@ const NotFound = () => (
     <Container>
       <h1>Page not found</h1>
       <p>You hit a route that doesn't exist.</p>
-      <pre>{JSON.stringify(navigateTo())}</pre>
       <p>
         <a
           style={{ color: "var(--accentColor)" }}
