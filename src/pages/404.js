@@ -1,5 +1,4 @@
 import React from "react"
-import { navigate } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -13,10 +12,10 @@ const NotFound = () => (
       <p>You hit a route that doesn't exist.</p>
       <p>
         <a
-          style={{ color: "var(--accentColor)" }}
+          style={{ color: "var(--accentColor)", cursor: "pointer" }}
           onClick={e => {
             e.preventDefault()
-            navigate(-1)
+            window.history.back()
           }}
         >
           Go Back
