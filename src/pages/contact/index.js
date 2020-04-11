@@ -77,7 +77,7 @@ const Contact = () => {
               </Error>
             )}
             <Submit type="submit" disabled={isSubmitting}>
-              Submit
+              {isSubmitting ? "Sending..." : "Submit"}
             </Submit>
           </form>
         </Wrapper>
