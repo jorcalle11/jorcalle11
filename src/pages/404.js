@@ -1,8 +1,9 @@
 import React from "react"
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
 import Container from "../components/Container"
+import Layout from "../components/Layout"
+import Link from "../components/Link"
+import SEO from "../components/Seo"
 
 const NotFound = () => (
   <Layout>
@@ -11,15 +12,10 @@ const NotFound = () => (
       <h1>Page not found</h1>
       <p>You hit a route that doesn't exist.</p>
       <p>
-        <a
-          style={{ color: "var(--accentColor)", cursor: "pointer" }}
-          onClick={e => {
-            e.preventDefault()
-            window.history.back()
-          }}
-        >
-          Go Back
-        </a>
+        Go{" "}
+        <Link to="/" style={{ color: "var(--accentColor)" }}>
+          home
+        </Link>
       </p>
     </Container>
   </Layout>
