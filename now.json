@@ -5,5 +5,11 @@
     "env": {
       "GATSBY_FIREBASE_FUNCTIONS_URL": "@gatsby-firebase-funtions-url"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "404"
+    }
+  ]
 }
