@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-import Emoji from "./Emoji"
 import Container from "./Container"
+import DarkModeToggle from "./DarkModeToggle"
+import SocialMedia from "./SocialMedia"
 
 const CustomFooter = styled.footer`
-  background-color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  border-top: 1px solid var(--secondaryText);
   color: var(--secondaryText);
   padding: 1rem 0;
   margin-top: auto !important;
@@ -15,27 +17,29 @@ const CustomFooter = styled.footer`
 const Div = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const P = styled.p`
   border: 1px solid transparent;
-  font-size: 0.9rem;
-  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 0px;
 `
 
 const Footer = () => (
   <CustomFooter>
     <Container>
       <Div>
+        <SocialMedia style={{ width: "150px" }} />
+        <DarkModeToggle style={{ marginLeft: "5px" }} />
+      </Div>
+      <Div>
         <P>
-          © {new Date().getFullYear()}, Powered by{" "}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> and{" "}
-          <a href="https://zeit.co/">Zeit</a>
-        </P>
-        <P>
-          From Sahagún with <Emoji label="heart" children="❤️" /> to the{" "}
-          <Emoji label="world" children="🌎️" />
+          <small>
+            jorcalle11 © {new Date().getFullYear()}, Powered by{" "}
+            <a href="https://www.gatsbyjs.org">Gatsby</a> and{" "}
+            <a href="https://zeit.co/">Zeit</a>
+          </small>
         </P>
       </Div>
     </Container>
