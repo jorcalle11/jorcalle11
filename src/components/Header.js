@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 import Avatar from "./Avatar"
 import Container from "./Container"
-import DarkModeToggle from "./DarkModeToggle"
 import NavLink from "./Link"
 import HamburgerButton from "./HamburgerButton"
 
@@ -21,12 +20,7 @@ export default function Header({ siteTitle }) {
             <Avatar />
             {siteTitle}
           </Brand>
-          <DesktopMenu>
-            {links.map(renderItem)}
-            <Li>
-              <DarkModeToggle />
-            </Li>
-          </DesktopMenu>
+          <DesktopMenu>{links.map(renderItem)}</DesktopMenu>
           <CustomHamburgerButton onClick={handleClick} />
         </Nav>
       </Container>
