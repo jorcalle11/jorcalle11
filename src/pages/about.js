@@ -7,7 +7,6 @@ import Item from "../components/Item"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
-import SocialMedia from "../components/SocialMedia"
 
 const About = () => (
   <Layout>
@@ -102,7 +101,6 @@ const About = () => (
           </Link>{" "}
           page.
         </p>
-        <SocialMedia />
       </section>
     </Container>
   </Layout>
