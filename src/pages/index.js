@@ -58,9 +58,10 @@ export default () => (
         </H1>
         <Photo borderRadius="5%" />
         <P>
-          I'm <b>Jorge Calle</b>, I'm a <b>System Engineer</b> and a{" "}
-          <b>JavaScript Developer</b> from Sahagún with more than 4 years of
-          experience writing code in both Frontend and Backend side.
+          I am <strong>Jorge Calle</strong>. I am a{" "}
+          <strong>System Engineer</strong> and a{" "}
+          <strong>JavaScript developer</strong> from Sahagún, with more than 4
+          years of experience writing code in both frontend and backend side.
         </P>
         <CustomLink to="/contact">Contact me!</CustomLink>
       </Div>

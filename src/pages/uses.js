@@ -7,14 +7,14 @@ import Item from "../components/Item"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
-import homeOffice from "../images/home_office_800.jpg"
+import homeOffice from "../images/desk_setup.jpg"
 
 const Uses = () => (
   <Layout>
     <SEO title="Uses" />
     <Container>
       <p>
-        Welcome to my uses page. If you are here it is because maybe you are
+        Welcome to my uses page. If you are here, it is because maybe you are
         interested in the specific of some piece of software or hardware that I
         use every day.
       </p>
@@ -24,7 +24,7 @@ const Uses = () => (
         </h2>
         <ul>
           <Item>
-            Currently I use{" "}
+            Currently, I use{" "}
             <a href="https://code.visualstudio.com/">Visual Studio Code</a> as
             my editor and{" "}
             <a href="https://gnometerminator.blogspot.com/p/introduction.html">
@@ -58,7 +58,7 @@ const Uses = () => (
             <a href="https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager">
               Project Manager
             </a>{" "}
-            extension help me to switch between projects.
+            extension helps me to switch between projects.
           </Item>
           <Item>
             I use{" "}
@@ -89,12 +89,12 @@ const Uses = () => (
           </Item>
           <Item>
             I use <a href="https://www.grammarly.com/">Grammarly</a> as my
-            assistant to check typos and spelling errors when I writing in
+            assistant to check typos and spelling errors when I write in
             English.
           </Item>
           <Item>
-            I use <a href="https://www.getpostman.com/">Postman</a> to test
-            APIs.
+            I use <a href="https://www.getpostman.com/">Postman</a> and{" "}
+            <a href="https://httpie.org">httpie</a> to test APIs.
           </Item>
         </ul>
       </Section>
@@ -105,7 +105,7 @@ const Uses = () => (
         <ul>
           <Item>
             My current machine is a Dell XPS 15 Notebook 7590 i7 2.60HGz with
-            20GB of RAM and a NVIDIA GeForce GTX 1650.
+            20GB of RAM and an NVIDIA GeForce GTX 1650.
           </Item>
           <Item>
             I use <b>Ubuntu</b> as my primary OS and <b>Windows 10</b> just for
@@ -154,6 +154,13 @@ const Uses = () => (
               Asenti Home collection.
             </a>
           </Item>
+          <Item>
+            I have a{" "}
+            <a href="https://www.amazon.com/gp/product/B07G58TTQH/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">
+              LED Strip Lights
+            </a>{" "}
+            behind my desk
+          </Item>
         </ul>
       </Section>
       <Section>
@@ -164,7 +171,7 @@ const Uses = () => (
       </Section>
       <p>
         If you have any questions about any of the above items, feel free to
-        reach out to me in the{" "}
+        reach out to me on the{" "}
         <Link to="/contact" style={{ color: "var(--accentColor)" }}>
           contact
         </Link>{" "}
