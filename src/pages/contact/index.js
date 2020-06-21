@@ -164,7 +164,7 @@ const Field = styled.div`
     color: var(--primaryText);
     background: none;
     padding: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   input:focus {
@@ -178,7 +178,7 @@ const Textarea = styled.textarea`
   border-style: solid;
   border-color: var(--primaryText);
   font-family: "Inter Regular", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--primaryText);
   padding: 0.7rem;
   overflow: auto;
