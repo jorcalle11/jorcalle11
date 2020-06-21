@@ -1,9 +1,7 @@
 import React from "react"
-import styled from "styled-components"
 
 import Container from "../components/Container"
 import Emoji from "../components/Emoji"
-import Item from "../components/Item"
 import Layout from "../components/Layout"
 import Link from "../components/Link"
 import SEO from "../components/Seo"
@@ -47,52 +45,14 @@ const About = () => (
           playing with my little daughter, visiting my family or friends.
         </p>
       </section>
-      <section id="skills">
-        <SectionTitle>Skills</SectionTitle>
-        <Skill
-          title="Frontend Development"
-          items={["React", "Redux", "CSS in Js", "Styled Components"]}
-        />
-        <Skill
-          title="Backend Development"
-          items={[
-            "Node.js",
-            "Serverless",
-            "Microservices",
-            "Express",
-            "MongoDB",
-            "SQL",
-            "Redis",
-            "Firebase",
-            "GraphQL",
-          ]}
-        />
-        <Skill title="Languages" items={["JavaScript"]}></Skill>
-      </section>
-      <section id="experience">
-        <SectionTitle>Experience</SectionTitle>
-        <Experience company="Condor Labs">
-          <Ul>
-            <Item>
-              Backend Developer <Period>March 2018 - Current</Period>
-            </Item>
-            <Item>
-              Frontend Developer <Period>Jul 2017 - Feb 2018</Period>
-            </Item>
-            <Item>
-              Software Enginner <Period>Jan 2017 - June 2017</Period>
-            </Item>
-          </Ul>
-        </Experience>
-        <Experience company="Domoti S.A.S">
-          <Ul>
-            <Item>
-              Frontend Developer <Period>Aug 2016 - Dec 2016</Period>
-            </Item>
-          </Ul>
-        </Experience>
-      </section>
       <section id="social" style={{ margin: "50px 0" }}>
+        <p>
+          Interested in my professional profile? Click{" "}
+          <Link to="/cv" style={{ color: "var(--accentColor)" }}>
+            here
+          </Link>{" "}
+          to see a summary of my curriculum vitae.
+        </p>
         <p>
           If you have any questions or you would like to get in touch, feel free
           to say hello through my social networks or leave me a message on the{" "}
@@ -105,46 +65,5 @@ const About = () => (
     </Container>
   </Layout>
 )
-
-function Skill({ title, items = [] }) {
-  return (
-    <div>
-      <H3>{title}</H3>
-      <P>{items.join(", ")}</P>
-    </div>
-  )
-}
-
-function Experience({ company, children }) {
-  return (
-    <div>
-      <H3>{company}</H3>
-      {children}
-    </div>
-  )
-}
-
-const SectionTitle = styled.h2`
-  margin-top: 40px;
-`
-
-const H3 = styled.h3`
-  margin-bottom: 0;
-`
-
-const P = styled.p`
-  margin-top: 0;
-`
-
-const Period = styled.span`
-  color: var(--secondaryText);
-  font-size: 1rem;
-  margin-left: 25px;
-`
-
-const Ul = styled.ul`
-  margin: 0;
-  padding-left: 20px;
-`
 
 export default About
