@@ -14,7 +14,7 @@ const About = () => (
       <p style={{ textAlign: "center" }}>
         In the meantime, you can take a look at my{" "}
         <a href="https://www.github.com/jorcalle11">Github profile</a>{" "}
-        <Emoji label="grimacing-face">😬</Emoji>.
+        <Emoji label="grimacing-face" children="😬" />.
       </p>
     </Container>
   </Layout>
