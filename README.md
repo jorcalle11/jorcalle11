@@ -1,6 +1,6 @@
 # Hi there! 👋
 
-My name is **Jorge Calle**. I am a System engineer and a JavaScript developer with industry experience bulding web applications. Professional experience working with Node.js, React and AWS.
+My name is **Jorge Calle**. I am a System engineer and a JavaScript developer with industry experience building web applications. Professional experience working with Node.js, React and AWS.
 
 ## Skills
 
