@@ -59,7 +59,7 @@ export default function CV({ username }) {
             <div>
               <P>
                 <strong>Jobbatical</strong>, Tallinn, Estonia -{" "}
-                <Position>Software Developer</Position>
+                <Position>Full Stack developer</Position>
               </P>
               <P>
                 <Period>October 2020 - Current</Period>
@@ -69,7 +69,7 @@ export default function CV({ username }) {
           <ExperienceItem>
             <div>
               <P>
-                <strong>Condor Labs</strong>, Cartagena(CO) -{" "}
+                <strong>Condor Labs</strong>, Cartagena, Colombia -{" "}
                 <Position>Senior Backend Developer</Position>
               </P>
               <P>
@@ -97,7 +97,7 @@ export default function CV({ username }) {
           <ExperienceItem>
             <div>
               <P>
-                <strong>Domoti S.A.S</strong>, Bogotá(CO) -{" "}
+                <strong>Domoti S.A.S</strong>, Bogotá, Colombia -{" "}
                 <Position>Frontend developer</Position>
               </P>
               <P>
