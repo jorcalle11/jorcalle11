@@ -19,8 +19,8 @@ const About = () => (
           <strong>Javascript developer</strong>. I have been writing code for
           about 4 years, I hope to keep doing it for a long time{" "}
           <Emoji label="smiling-face" children="😊" />. I'm currently working at{" "}
-          <a href="https://condorlabs.io/">Condor Labs</a> as a{" "}
-          <strong>Software engineer</strong>.
+          <a href="https://jobbatical.com/">Jobbatical</a> as a{" "}
+          <strong>Software developer</strong>.
         </p>
         <p>
           At the same time, I dedicate part of my time to continue training and
