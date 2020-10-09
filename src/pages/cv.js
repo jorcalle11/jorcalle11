@@ -58,11 +58,22 @@ export default function CV({ username }) {
           <ExperienceItem>
             <div>
               <P>
-                <strong>Condor Labs</strong>, Cartagena(CO) -{" "}
-                <Position>Software Engineer</Position>
+                <strong>Jobbatical</strong>, Tallinn, Estonia -{" "}
+                <Position>Software Developer</Position>
               </P>
               <P>
-                <Period>January 2017 - Current</Period>
+                <Period>October 2020 - Current</Period>
+              </P>
+            </div>
+          </ExperienceItem>
+          <ExperienceItem>
+            <div>
+              <P>
+                <strong>Condor Labs</strong>, Cartagena(CO) -{" "}
+                <Position>Senior Backend Developer</Position>
+              </P>
+              <P>
+                <Period>January 2017 - September 2020</Period>
               </P>
             </div>
             <ul>
