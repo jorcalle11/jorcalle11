@@ -4,9 +4,9 @@ My name is **Jorge Calle**. I am a System Engineer and a JavaScript developer fr
 
 ## Skills
 
-- **Frontend**: Vainilla JavaScript, React, Redux, CSS in JS
-- **Backend**: Node.js, Express.js, Hapi.js, MongoDB, Redis, SQL, Firebase, Docker, GraphQL
-- **DevOps**: Ansible, AWS
+- **Frontend**: React, Next.js, JavaScript, TypeScript, HTML, CSS
+- **Backend**: Node.js, Express, GraphQL, MongoDB, MySQL, Redis
+- **DevOps**: Docker, Ansible, AWS, GCP, GitHub Actions, Shell Scripting, Self-hosted servers
 
 ## You can also find me on
 
