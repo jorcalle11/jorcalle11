@@ -1,17 +1,57 @@
-# Hi there! 👋
+# Jorge Calle
 
-My name is **Jorge Calle**. I am a System Engineer and a JavaScript developer from [Sahagún (CO)](https://es.wikipedia.org/wiki/Sahag%C3%BAn_(Colombia)), with Professional experience building web applications. [Read more about me](https://www.jorgecalle.co/about)
+**Senior Software Engineer**
 
-## Skills
+📍 Cartagena, Colombia | 📧 [jorcalle11@gmail.com](mailto:jorcalle11@gmail.com)
+💻 [github.com/jorcalle11](https://github.com/jorcalle11)
 
-- **Frontend**: React, Next.js, JavaScript, TypeScript, HTML, CSS
-- **Backend**: Node.js, Express, GraphQL, MongoDB, MySQL, Redis
-- **DevOps**: Docker, Ansible, AWS, GCP, GitHub Actions, Shell Scripting, Self-hosted servers
+---
 
-## You can also find me on
+## About
 
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg' alt='instagram' height='40'>](https://www.instagram.com/jorcalle11) [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg' alt='twitter' height='40'>](https://twitter.com/jorcalle11)
+Backend-focused Software Engineer with 9 years of experience building, automating, and scaling professional web applications. Specialized in **Node.js**, **React**, **Self-hosted**, and **cloud infrastructure**, with a strong emphasis on process automation and clean architecture. Passionate about improving developer workflows and delivering reliable, high-performance software.
 
-## My GitHub stats
+---
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=jorcalle11&show_icons=true)
+## Experience
+
+### Senior Software Engineer — [Jobbatical](https://www.jobbatical.com)
+
+_Remote | 2020 – Present_
+
+- Architected and maintained scalable backend systems using **Node.js**, **GraphQL**, and **MongoDB**.
+- Automated immigration workflows like form filling and document generation, reducing manual processing time for delivery teams.
+- Built and maintained integrations with multiple third-party services to streamline data exchange and improve operational efficiency.
+- Mentored engineers and promoted best practices across the development team.
+
+### Senior Full Stack Developer — [Condor Labs](https://condorlabs.io)
+
+_Office | 2017 – 2020_
+
+- Built and maintained full-stack applications using **React**, **Node.js**, and **Oracle**.
+- Collaborated on the migration of a monolithic system to microservices, improving deployment speed and system reliability.
+- Automated CI/CD pipelines with **Ansible** and **shell scripting**, reducing release times.
+- Migrated on-premise infrastructure to **AWS**, enhancing reliability and scalability.
+
+### Frontend Developer — Domoti S.A.S
+
+_Remote | 2016 – 2017_
+
+- Developed responsive, performant user interfaces using **Angular** and **JavaScript**.
+- Collaborated with backend developers to integrate RESTful APIs, ensuring seamless data flow.
+
+---
+
+## Education
+
+**System Engineer** — [Universidad de Córdoba](https://www.unicordoba.edu.co)
+_2010 – 2015_
+
+---
+
+## Technical Skills
+
+**Frontend:** React, Next.js, JavaScript, TypeScript, HTML, CSS
+**Backend:** Node.js, Express, GraphQL, MongoDB, MySQL, Redis
+**Testing:** Playwright, Puppeteer, BrowserStack
+**DevOps:** Docker, Ansible, AWS, GCP, GitHub Actions, Shell Scripting, Self-hosted servers
